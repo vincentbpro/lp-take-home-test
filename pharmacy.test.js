@@ -28,4 +28,10 @@ describe("Pharmacy", () => {
       new Pharmacy([new Drug("Fervex", 5, 49)]).updateBenefitValue(),
     ).toStrictEqual([new Drug("Fervex", 4, 50)]);
   });
+
+  it("decreases dafalgan benefit twice as fast as normal drugs", () => {
+    expect(
+      new Pharmacy([new Drug("Dafalgan", 5, 10)]).updateBenefitValue(),
+    ).toStrictEqual([new Drug("Dafalgan", 4, 8)]);
+  });
 });

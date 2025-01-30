@@ -43,4 +43,12 @@ export const drugs = {
       return benefit + 1;
     },
   },
+
+  Dafalgan: {
+    applyExpirationChange: defaultDrug.applyExpirationChange,
+    applyBenefitChange: (benefit) => {
+      // Dafalgan degrades in Benefit twice as fast as normal drugs
+      return benefit - 2;
+    },
+  },
 };
